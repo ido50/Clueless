@@ -1,0 +1,31 @@
+.1kb_row () {
+	width: 960px;
+	margin: 0 auto;
+	overflow: hidden;
+
+	.1kb_row () {
+		margin: 0 -10px;
+		width: auto;
+		display: inline-block;
+	}
+
+	.col (@cols: 12) {
+		margin: 0 10px;
+		overflow: hidden;
+		float: left;
+		display: inline;
+
+		width: e(` (this.cols.toJS() == 1) ? '60px' :
+			   (this.cols.toJS() == 2) ? '140px' :
+			   (this.cols.toJS() == 3) ? '220px' :
+			   (this.cols.toJS() == 4) ? '300px' :
+			   (this.cols.toJS() == 5) ? '380px' :
+			   (this.cols.toJS() == 6) ? '460px' :
+			   (this.cols.toJS() == 7) ? '540px' :
+			   (this.cols.toJS() == 8) ? '620px' :
+			   (this.cols.toJS() == 9) ? '700px' :
+			   (this.cols.toJS() == 10) ? '780px' :
+			   (this.cols.toJS() == 11) ? '860px' : '940px';
+			`);
+	}
+}

@@ -1,0 +1,42 @@
+.clueless_row (@width: 100%, @gap: 0, @pad: 0, @dir: left) {
+	@clueless_gap: @gap;
+	@clueless_dir: @dir;
+	@clueless_pad: @pad;
+
+	width: @width - (@clueless_pad * 2);
+	margin: 0 auto;
+	overflow: hidden;
+	padding: 0 @clueless_pad;
+
+	.col (@width: 100%, @padding: 0) {
+		@d: @clueless_dir;
+		@g: @clueless_gap / 2;
+
+		width: @width - (@padding * 2);
+		padding: @padding;
+		overflow: hidden;
+		float: @d;
+		display: inline;
+		margin: 0 @g;
+	}
+
+	.first () {
+		@d: @clueless_dir;
+		@g: @clueless_gap / 2;
+
+		@right: e(` (this.d.toJS() == 'left') ? this.g.toJS() : 0 `);
+		@left:  e(` (this.d.toJS() == 'left') ? 0 : this.g.toJS() `);
+
+		margin: 0 @right 0 @left;
+	}
+	
+	.last () {
+		@d: @clueless_dir;
+		@g: @clueless_gap / 2;
+
+		@right: e(` (this.d.toJS() == 'left') ? 0 : this.g.toJS() `);
+		@left:  e(` (this.d.toJS() == 'left') ? this.g.toJS() : 0 `);
+
+		margin: 0 @right 0 @left;
+	}
+}

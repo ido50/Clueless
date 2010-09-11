@@ -1,0 +1,109 @@
+/*
+ * Text Replacement - text-indent method
+ * - HTML5 Boilerplate (http://html5boilerplate.com/)
+ *
+ * use this to replace text (mostly in links) with images. For example,
+ * say you have a link with a certain text, but you want to replace that
+ * text with an image. With the text-indent method, you
+ * add a background-image to the link and a large negative text-indent to
+ * prevent the text from showing up.
+.ir {
+	display: block;
+	text-indent: -999em;
+	overflow: hidden;
+	background-repeat: no-repeat;
+}
+
+
+
+
+/*
+ * Text Replacement - span method
+ * - source unknown
+ *
+ * use this to replace text (mostly in links) with images. Most people use
+ * the text-indent method of replacing text, I find this method better.
+ * For example, say you have a link you with a certain text, but you want
+ * to replace that text with an image. In this method, you wrap the text in
+ * the link with a span, and set the span with "display: none", thus preventing
+ * the text from showing up (and taking any visual space in the DOM). So
+ * you'd have <a class="tr" id="logo" href="/home"><span>Go Home</span></a>.
+.tr span {
+	display: none;
+}
+
+
+
+
+/* 
+ * Hide for both screenreaders and browsers
+ * - css-discuss.incutio.com/wiki/Screenreader_Visibility
+ * - HTML5 Boilerplate (http://html5boilerplate.com/)
+ *
+ */
+.hidden {
+	display: none;
+	visibility: hidden;
+}
+
+
+
+
+/*
+ * Hide only visually, but have it available for screenreaders 
+ * - www.webaim.org/techniques/css/invisiblecontent/ 
+ * - Solution from: j.mp/visuallyhidden - Thanks Jonathan Neal!
+ * - HTML5 Boilerplate (http://html5boilerplate.com/)
+ *
+ */
+.visuallyhidden {
+	position: absolute !important;    
+	clip: rect(1px 1px 1px 1px); /* IE6, IE7 */
+	clip: rect(1px, 1px, 1px, 1px);
+}
+
+
+
+
+/*
+ * Hide visually and from screenreaders, but maintain layout
+ * - HTML5 Boilerplate (http://html5boilerplate.com/)
+ *
+ */
+.invisible {
+	visibility: hidden;
+}
+
+
+
+/*
+ * Text Reverse
+ * - source unknown
+ * 
+ * use this to print email addresses backwords in HTML and reverse them
+ * to their proper direction with CSS, thus preventing bad bots from
+ * picking up that email. For example, in your HTML have <span class="reversed">moc.liamg@em</span>,
+ * this will be presented in the browser as me@gmail.com
+ */
+.reversed {
+	direction: rtl;
+	unicode-bidi: bidi-override;
+}
+
+
+/*
+ * The New Clearfix Method by Jeff Star
+ * - http://perishablepress.com/press/2009/12/06/new-clearfix-hack/
+ * 
+ * use this to fix css float problems
+ */
+.clearfix:after {
+	visibility: hidden;
+	display: block;
+	font-size: 0;
+	content: " ";
+	clear: both;
+	height: 0;
+}
+* html .clearfix             { zoom: 1; } /* IE6 */
+*:first-child+html .clearfix { zoom: 1; } /* IE7 */

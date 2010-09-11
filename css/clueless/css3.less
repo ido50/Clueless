@@ -1,0 +1,42 @@
+.css3_border_radius (@tl: 5px, @tr: 5px, @br: 5px, @bl: 5px) {
+	-moz-border-radius: @tl @tr @br @bl;	/* FF1+ */
+	-webkit-border-radius: @tl @tr @br @bl;	/* Saf3-4 */
+	border-radius: @tl @tr @br @bl;		/* Opera 10.5, IE 9, Saf5, Chrome */
+	behavior: url('css/clueless/inc/PIE-1.0b2.htc');
+}
+
+.css3_box_model {
+	box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+}
+
+.css3_box_rotate (@deg: 4.5deg) {
+	-moz-transform: rotate(@deg);  /* FF3.5+ */
+	-o-transform: rotate(@deg);  /* Opera 10.5 */
+	-webkit-transform: rotate(@deg);  /* Saf3.1+, Chrome */
+	zoom: 1;
+}
+
+.css3_box_shadow (@x:10px, @y:10px, @blur:5px, @color: #ccc) {
+	-moz-box-shadow: @x @y @blur @color;
+	-webkit-box-shadow: @x @y @blur @color;
+	box-shadow: @x @y @blur @color;
+	behavior: url('css/clueless/inc/PIE-1.0b2.htc');
+}
+
+.css3_inset_box_shadow (@x:10px, @y:10px, @blur:5px, @color: #ccc) {
+	-moz-box-shadow: inset @x @y @blur @color;
+	-webkit-box-shadow: inset @x @y @blur @color;
+	box-shadow: inset @x @y @blur @color;
+	behavior: url('css/clueless/inc/PIE-1.0b2.htc');
+}
+
+.css3_box_gradient (@start_color: #ccc, @end_color: #eee, @start: center top, @degree: -90deg, @end: center bottom) {
+	background-color: @start;
+	background-image: -moz-linear-gradient(@start @degree, @start_color, @end_color); 
+	background-image: -webkit-gradient(linear, @start, @end, color-stop(0, @start_color), color-stop(1, @end_color));
+	-webkit-background-origin: padding-box;
+	-pie-background: linear-gradient(@degree, @start_color, @end_color);
+	behavior: url('css/clueless/inc/PIE-1.0b2.htc');
+}

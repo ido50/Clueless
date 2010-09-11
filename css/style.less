@@ -1,0 +1,71 @@
+@import "clueless.less";
+
+/* Use HTML5 Doctor reset */
+.reset_html5d;
+
+/* Use HTML5 Boilerplate base styles */
+.base_html5b;
+
+/* Use YUI basic typography */
+.typo_yui;
+
+/* Default styles (for large HD screens of more than 1825px) */
+body {
+	
+	article {
+		.clueless_row(100%, 5%, 5%);
+		
+		header {
+			.clueless_row > .col(20%, 2.5%);
+			.clueless_row > .first;
+			background-color: #FFE5E5;
+		}
+		
+		section {
+			.clueless_row > .col(50%, 2.5%);
+			background-color: #FFFAD1;
+		}
+		
+		aside {
+			.clueless_row > .col(20%, 2.5%);
+			.clueless_row > .last;
+			background-color: #D1F3FF;
+		}
+	}
+	
+}
+
+/* Style adjustments for small screens (probably smartphones of up to 320px) */
+@media only screen and (max-width: 767px) {
+	
+}
+
+/* Style adjustments for medium screens (iPads and netbooks of 768px, up to 1223px) */
+@media only screen and (min-width: 768px) and (max-width: 1223px) {
+	
+}
+
+/* Style adjustments for desktop/laptop screens (between 1224px and 1824px) */
+@media only screen and (min-width: 1224px) and (max-width: 1824px) {
+	
+}
+
+/* Style adjustments for iPhone 4 and other high device-pixel-ratio devices */
+@media
+	only screen and (-webkit-min-device-pixel-ratio: 1.5),
+	only screen and (min-device-pixel-ratio: 1.5) {
+	
+}
+
+/* Style adjustments for portrait mode */
+@media all and (orientation:portrait) { 
+	
+}
+
+/* Style adjustments for landscape mode */
+@media all and (orientation:landscape) { 
+	
+}
+
+/* Use HTML5 Boilerplate print styles */
+.print_html5b;
