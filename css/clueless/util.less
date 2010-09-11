@@ -7,7 +7,9 @@
  * text with an image. With the text-indent method, you
  * add a background-image to the link and a large negative text-indent to
  * prevent the text from showing up.
-.ir {
+ *
+ */
+.ir () {
 	display: block;
 	text-indent: -999em;
 	overflow: hidden;
@@ -28,8 +30,12 @@
  * the link with a span, and set the span with "display: none", thus preventing
  * the text from showing up (and taking any visual space in the DOM). So
  * you'd have <a class="tr" id="logo" href="/home"><span>Go Home</span></a>.
-.tr span {
-	display: none;
+ *
+ */
+.tr () {
+	span {
+		display: none;
+	}
 }
 
 
@@ -41,7 +47,7 @@
  * - HTML5 Boilerplate (http://html5boilerplate.com/)
  *
  */
-.hidden {
+.hidden () {
 	display: none;
 	visibility: hidden;
 }
@@ -56,7 +62,7 @@
  * - HTML5 Boilerplate (http://html5boilerplate.com/)
  *
  */
-.visuallyhidden {
+.visuallyhidden () {
 	position: absolute !important;    
 	clip: rect(1px 1px 1px 1px); /* IE6, IE7 */
 	clip: rect(1px, 1px, 1px, 1px);
@@ -70,7 +76,7 @@
  * - HTML5 Boilerplate (http://html5boilerplate.com/)
  *
  */
-.invisible {
+.invisible () {
 	visibility: hidden;
 }
 
@@ -85,7 +91,7 @@
  * picking up that email. For example, in your HTML have <span class="reversed">moc.liamg@em</span>,
  * this will be presented in the browser as me@gmail.com
  */
-.reversed {
+.reversed () {
 	direction: rtl;
 	unicode-bidi: bidi-override;
 }
@@ -97,13 +103,15 @@
  * 
  * use this to fix css float problems
  */
-.clearfix:after {
-	visibility: hidden;
-	display: block;
-	font-size: 0;
-	content: " ";
-	clear: both;
-	height: 0;
+.clearfix () {
+	&:after {
+		visibility: hidden;
+		display: block;
+		font-size: 0;
+		content: " ";
+		clear: both;
+		height: 0;
+	}
+	
+	zoom: 1;
 }
-* html .clearfix             { zoom: 1; } /* IE6 */
-*:first-child+html .clearfix { zoom: 1; } /* IE7 */

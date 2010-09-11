@@ -1,42 +1,69 @@
-.clueless_row (@width: 100%, @gap: 0, @pad: 0, @dir: left) {
+.cs_row_left (@width: 100%, @gap: 0, @pad: 0, @min: 0, @max: 100%) {
 	@clueless_gap: @gap;
-	@clueless_dir: @dir;
 	@clueless_pad: @pad;
 
 	width: @width - (@clueless_pad * 2);
 	margin: 0 auto;
 	overflow: hidden;
 	padding: 0 @clueless_pad;
+	min-width: @min;
+	max-width: @max;
 
 	.col (@width: 100%, @padding: 0) {
-		@d: @clueless_dir;
 		@g: @clueless_gap / 2;
 
 		width: @width - (@padding * 2);
 		padding: @padding;
 		overflow: hidden;
-		float: @d;
-		display: inline;
+		float: left;
+		display: block;
 		margin: 0 @g;
 	}
 
 	.first () {
-		@d: @clueless_dir;
 		@g: @clueless_gap / 2;
 
-		@right: e(` (this.d.toJS() == 'left') ? this.g.toJS() : 0 `);
-		@left:  e(` (this.d.toJS() == 'left') ? 0 : this.g.toJS() `);
-
-		margin: 0 @right 0 @left;
+		margin: 0 @g 0 0;
 	}
 	
 	.last () {
-		@d: @clueless_dir;
 		@g: @clueless_gap / 2;
 
-		@right: e(` (this.d.toJS() == 'left') ? 0 : this.g.toJS() `);
-		@left:  e(` (this.d.toJS() == 'left') ? this.g.toJS() : 0 `);
+		margin: 0 0 0 @g;
+	}
+}
 
-		margin: 0 @right 0 @left;
+.cs_row_right (@width: 100%, @gap: 0, @pad: 0, @min: 0, @max: 100%) {
+	@clueless_gap: @gap;
+	@clueless_pad: @pad;
+
+	width: @width - (@clueless_pad * 2);
+	margin: 0 auto;
+	overflow: hidden;
+	padding: 0 @clueless_pad;
+	min-width: @min;
+	max-width: @max;
+
+	.col (@width: 100%, @padding: 0) {
+		@g: @clueless_gap / 2;
+
+		width: @width - (@padding * 2);
+		padding: @padding;
+		overflow: hidden;
+		float: right;
+		display: block;
+		margin: 0 @g;
+	}
+
+	.first () {
+		@g: @clueless_gap / 2;
+
+		margin: 0 0 0 @g;
+	}
+	
+	.last () {
+		@g: @clueless_gap / 2;
+
+		margin: 0 @g 0 0;
 	}
 }
