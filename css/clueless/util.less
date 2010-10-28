@@ -14,6 +14,8 @@
 	text-indent: -999em;
 	overflow: hidden;
 	background-repeat: no-repeat;
+	text-align: left;
+	direction: ltr;
 }
 
 
@@ -63,7 +65,7 @@
  *
  */
 .visuallyhidden () {
-	position: absolute !important;    
+	position: absolute !important;   
 	clip: rect(1px 1px 1px 1px); /* IE6, IE7 */
 	clip: rect(1px, 1px, 1px, 1px);
 }
@@ -82,6 +84,7 @@
 
 
 
+
 /*
  * Text Reverse
  * - source unknown
@@ -97,21 +100,27 @@
 }
 
 
+
+
 /*
  * The New Clearfix Method by Jeff Star
  * - http://perishablepress.com/press/2009/12/06/new-clearfix-hack/
+ * - updated from html5boilerplate to prevent margin-collapsing on child elements << j.mp/bestclearfix
  * 
  * use this to fix css float problems
  */
 .clearfix () {
-	&:after {
-		visibility: hidden;
-		display: block;
-		font-size: 0;
-		content: " ";
-		clear: both;
-		height: 0;
-	}
-	
 	zoom: 1;
+
+	&:before, &:after {
+		content: "\0020";
+		display: block;
+		height: 0;
+		visibility: hidden;
+		font-size: 0;
+	} 
+
+	&:after {
+		clear: both;
+	}
 }

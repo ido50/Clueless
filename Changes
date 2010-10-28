@@ -1,0 +1,10 @@
+[2010-10-28]
+	- updated with version 0.9.5 of HTML5 Boilerplate
+	- Modernizr updated to version 1.6
+	- less.js updated to version 1.0.36
+	- added Selectivzr version 1.0.0
+	- added HTML5 Boilerplate's build and test directories though
+	  they're probably not functional yet
+
+[2010-09-11]
+	- initial working version
