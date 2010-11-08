@@ -10,27 +10,34 @@
 
 		<!-- Always force latest IE rendering engine (even in intranet) & Chrome Frame 
 		Remove this if you use the .htaccess -->
-		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
 
 		<title></title>
 		<meta name="description" content="" />
 		<meta name="author" content="" />
 
 		<!--  Mobile viewport optimized: j.mp/bplateviewport -->
-		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-		<!-- Place favicon.ico & apple-touch-icon.png in the root of your domain and delete these references -->
-		<link rel="shortcut icon" href="/favicon.ico">
-		<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+		<!-- Place favicon.ico & apple-touch-icon.png in the root
+		     of your domain and delete these references       -->
+		<link rel="shortcut icon" href="/favicon.ico" />
+		<link rel="apple-touch-icon" href="/apple-touch-icon.png" />
 
 		<!-- CSS : implied media="all" -->
 		<link rel="stylesheet/less" href="css/style-0.1.less" />
 
 		<!-- All JavaScript at the bottom, except for less.js which
-		translates .less files to .css on the fly and Modernizr
-		which enables HTML5 elements & feature detects -->
+		     translates .less files to .css on the fly and Modernizr
+		     which enables HTML5 elements & feature detects      -->
 		<script src="js/libs/less-1.0.36.min.js"></script>
 		<script src="js/libs/modernizr-1.6.min.js"></script>
+
+		<!-- Make Internet Explorer play nice -->
+		<!--[if (gte IE 6)&(lte IE 8)]>
+			<script src="js/libs/nwmatcher-1.2.2.min.js"></script>
+			<script src="js/libs/selectivizr-1.0.0.min.js"></script>
+		<![endif]-->
 	</head>
 	<body>
 
@@ -57,18 +64,13 @@
 		<!-- Javascript at the bottom for fast page loading -->
 
 		<!-- Grab Google CDN's jQuery. fall back to local if necessary -->
-		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.3/jquery.min.js"></script>
+		<script src="//ajax.googleapis.com/ajax/libs/jquery/1.4.3/jquery.min.js"></script>
 		<script>!window.jQuery && document.write(unescape('%3Cscript src="js/libs/jquery-1.4.3.min.js"%3E%3C/script%3E'))</script>
 
 		<!-- scripts concatenated and minified via ant build script -->
 		<script src="js/plugins.js"></script>
 		<script src="js/script.js"></script>
 		<!-- end concatenated and minified scripts -->
-
-		<!-- Make Internet Explorer play nice -->
-		<!--[if (gte IE 6)&(lte IE 8)]>
-			<script type="text/javascript" src="js/libs/selectivizr-1.0.0.min.js"></script>
-		<![endif]-->
 
 		<!--[if lt IE 7 ]>
 			<script src="js/libs/dd_belatedpng.js"></script>
