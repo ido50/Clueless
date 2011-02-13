@@ -2,13 +2,13 @@
 	-moz-border-radius: @tl @tr @br @bl;	/* FF1+ */
 	-webkit-border-radius: @tl @tr @br @bl;	/* Saf3-4 */
 	border-radius: @tl @tr @br @bl;		/* Opera 10.5, IE 9, Saf5, Chrome */
-	behavior: url('css/clueless/inc/PIE-1.0b2.htc');
+	behavior: url('inc/PIE-1.0b2.htc');
 }
 
-.css3_box_model {
-	box-sizing: border-box;
+.css3_box_model () {
 	-webkit-box-sizing: border-box;
 	-moz-box-sizing: border-box;
+	box-sizing: border-box;
 }
 
 .css3_box_rotate (@deg: 4.5deg) {
@@ -22,14 +22,14 @@
 	-moz-box-shadow: @x @y @blur @color;
 	-webkit-box-shadow: @x @y @blur @color;
 	box-shadow: @x @y @blur @color;
-	behavior: url('css/clueless/inc/PIE-1.0b2.htc');
+	behavior: url('inc/PIE-1.0b2.htc');
 }
 
 .css3_inset_box_shadow (@x:10px, @y:10px, @blur:5px, @color: #ccc) {
 	-moz-box-shadow: inset @x @y @blur @color;
 	-webkit-box-shadow: inset @x @y @blur @color;
 	box-shadow: inset @x @y @blur @color;
-	behavior: url('css/clueless/inc/PIE-1.0b2.htc');
+	behavior: url('inc/PIE-1.0b2.htc');
 }
 
 .css3_box_gradient (@start_color: #ccc, @end_color: #eee, @start: center top, @degree: -90deg, @end: center bottom) {
@@ -38,5 +38,53 @@
 	background-image: -webkit-gradient(linear, @start, @end, color-stop(0, @start_color), color-stop(1, @end_color));
 	-webkit-background-origin: padding-box;
 	-pie-background: linear-gradient(@degree, @start_color, @end_color);
-	behavior: url('css/clueless/inc/PIE-1.0b2.htc');
+	behavior: url('inc/PIE-1.0b2.htc');
+}
+
+.css3_flexbox () {
+	display: -moz-box;
+	display: -webkit-box;
+	display: box;
+}
+
+.css3_flexbox_inline () {
+	display: -moz-inline-box;
+	display: -webkit-inline-box;
+	display: inline-box;
+}
+
+.css3_flexbox_orient (@dir: horizontal) {
+	-moz-box-orient: @dir;
+	-webkit-box-orient: @dir;
+	box-orient: @dir;
+}
+
+.css3_flexbox_flex (@flex: 1) {
+	-moz-box-flex: @flex;
+	-webkit-box-flex: @flex;
+	box-flex: @flex;
+}
+
+.css3_flexbox_direction (@dir: normal) {
+	-moz-box-direction: @dir;
+	-webkit-box-direction: @dir;
+	box-direction: @dir;
+}
+
+.css3_flexbox_ordinal_group (@group: 1) {
+	-moz-box-ordinal-group: @group;
+	-webkit-box-ordinal-group: @group;
+	box-ordinal-group: @group;
+}
+
+.css3_flexbox_pack (@pack: center) {
+	-moz-box-pack: @pack;
+	-webkit-box-pack: @pack;
+	box-pack: @pack;
+}
+
+.css3_flexbox_align (@align: center) {
+	-moz-box-align: @align;
+	-webkit-box-align: @align;
+	box-align: @align;
 }
