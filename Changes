@@ -1,3 +1,8 @@
+[2011-03-13]
+	- restructure, removed stuff i don't use
+	- updated some javascript libraries
+	- updated index.html
+
 [2010-10-28]
 	- updated with version 0.9.5 of HTML5 Boilerplate
 	- Modernizr updated to version 1.6

@@ -2,25 +2,6 @@
 
 */
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+head.ready(function() {
+	// do stuff
+});
