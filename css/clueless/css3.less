@@ -2,7 +2,7 @@
 	-moz-border-radius: @tl @tr @br @bl;	/* FF1+ */
 	-webkit-border-radius: @tl @tr @br @bl;	/* Saf3-4 */
 	border-radius: @tl @tr @br @bl;		/* Opera 10.5, IE 9, Saf5, Chrome */
-	behavior: url('inc/PIE-1.0b2.htc');
+	behavior: url('inc/pie.htc?v=1.0b4');
 }
 
 .css3_box_model (@sizing: border-box) {
@@ -22,14 +22,14 @@
 	-moz-box-shadow: @x @y @blur @color;
 	-webkit-box-shadow: @x @y @blur @color;
 	box-shadow: @x @y @blur @color;
-	behavior: url('inc/PIE-1.0b2.htc');
+	behavior: url('inc/pie.htc?v=1.0b4');
 }
 
 .css3_inset_box_shadow (@x:10px, @y:10px, @blur:5px, @color: #ccc) {
 	-moz-box-shadow: inset @x @y @blur @color;
 	-webkit-box-shadow: inset @x @y @blur @color;
 	box-shadow: inset @x @y @blur @color;
-	behavior: url('inc/PIE-1.0b2.htc');
+	behavior: url('inc/pie.htc?v=1.0b4');
 }
 
 .css3_box_gradient (@start_color: #ccc, @end_color: #eee, @start: center top, @degree: -90deg, @end: center bottom) {
@@ -38,7 +38,7 @@
 	background-image: -webkit-gradient(linear, @start, @end, color-stop(0, @start_color), color-stop(1, @end_color));
 	-webkit-background-origin: padding-box;
 	-pie-background: linear-gradient(@degree, @start_color, @end_color);
-	behavior: url('inc/PIE-1.0b2.htc');
+	behavior: url('inc/pie.htc?v=1.0b4');
 }
 
 .css3_flexbox () {

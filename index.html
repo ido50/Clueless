@@ -19,8 +19,8 @@
 		<link rel="shortcut icon" href="/favicon.ico" />
 		<link rel="apple-touch-icon" href="/apple-touch-icon.png" />
 
-		<!-- CSS : implied media="all" -->
-		<link rel="stylesheet/less" href="css/style.less?v=1" />
+		<!-- LESS -->
+		<link rel="stylesheet/less" href="css/style.less?v=1" media="all" />
 
 		<!-- Blocking JavaScript (non-blocking at bottom) -->
 		<script type="text/javascript" src="js/libs/less.min.js?v=1.0.41"></script>
@@ -49,9 +49,10 @@
 
 		<!-- Non-blocking JavaScript -->
 		<script type="text/javascript">
-			head.js('js/libs/jquery.min.js?v=1.5.1', function() {
-				// do stuff
-			});
+			head.js(
+				'js/libs/jquery.min.js?v=1.6',
+				'js/script.js?v=0.1'
+			);
 		</script>
 	</body>
 </html>
